@@ -1,6 +1,7 @@
-FROM python:alpine3.8
+FROM python:3.8-alpine
 COPY . /app
 WORKDIR /app
+ADD . /app
 RUN pip install -r requirements.txt
 EXPOSE 5000
 CMD python ./index.py
